@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Low-Poly F1 Racer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="gl"></canvas>
+
+  <!-- HUD overlay -->
+  <div id="hud"></div>
+
+  <!-- touch sliders: steer left, brake+gas right -->
+  <div id="controls"></div>
+
+  <button id="pauseBtn" style="display:none">❚❚</button>
+
+  <!-- menu -->
+  <div id="menu">
+    <div class="panel">
+      <h1>LOW&#8209;POLY F1</h1>
+      <label>Grand Prix
+        <select id="trackSel"></select>
+      </label>
+      <label>Weather
+        <select id="weatherSel"></select>
+      </label>
+      <label>Tyre
+        <select id="tyreSel"></select>
+      </label>
+      <p class="hint">Left thumb drags the steering slider &middot; right thumb holds the two vertical gas / brake sliders.<br/>
+      Physics simulates lock-ups, ABS, traction control, slides and aquaplaning in the rain.</p>
+      <button id="startBtn">LIGHTS OUT</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
